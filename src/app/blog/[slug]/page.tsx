@@ -2,6 +2,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
+import CommentSection from "@/components/Comment";
 
 export const revalidate = 60; //seconds
 
@@ -100,6 +101,7 @@ async function page(
         />
         
       </section>
+      <CommentSection />
     </article>
   );
 }
